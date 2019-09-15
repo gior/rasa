@@ -70,9 +70,9 @@ class SklearnIntentClassifier(Component):
         return self.le.fit_transform(labels)
 
     def transform_labels_num2str(self, y: np.ndarray) -> np.ndarray:
-        """Transforms a list of strings into numeric label representation.
+        """Transforms a numeric label representation into a list of strings.
 
-        :param y: List of labels to convert to numeric representation"""
+        :param y: Numeric representation to convert to list of labels"""
 
         return self.le.inverse_transform(y)
 
